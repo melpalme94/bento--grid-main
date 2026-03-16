@@ -67,6 +67,7 @@ color:white;
 
 .yellow-100{
 background:hsl(31,66%,93%);
+font-size: x-large;
 }
 
 .purple2-100{
@@ -92,6 +93,11 @@ color:#6F52D9;
 grid-area:create;
 }
 
+#create-content img{
+margin:auto;
+}
+
+
 #hero{
 grid-area:hero;
 text-align:center;
@@ -116,10 +122,11 @@ grid-area:ai;
 #audience{
 grid-area:audience;
 text-align:center;
+font-size: 30px;
 }
 
 #audience h2 {
-  font-size: xx-large;
+  font-size: 100px;
 }
 
 #grow-followers{
