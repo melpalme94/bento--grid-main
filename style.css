@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;1,9..40,500&display=swap');
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+#hero { grid-area: hero; }
+#schedule { grid-area: schedule; }
+#create-content { grid-area: create; }
+/* ... e assim por diante */
+
+*{
+    font-family: 'DM Sans', sans-serif;
+}
+
+.bento-grid {
+  display: grid;
+  gap: 24px;
+  /* Criamos 4 colunas */
+  grid-template-columns: repeat(4, 1fr);
+  /* Definimos onde cada ID de card vai ficar */
+  grid-template-areas: 
+    "create hero hero schedule"
+    "create accounts consistent schedule"
+    "write growth growth growth";
+}
