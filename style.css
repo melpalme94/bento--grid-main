@@ -1,66 +1,164 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;1,9..40,500&display=swap');
 
-/* Reset básico */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'DM Sans', sans-serif;
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'DM Sans', sans-serif;
 }
 
-body {
-  background: hsl(0, 0%, 96%);
-  padding: 40px;
-  display: flex;
-  justify-content: center;
+/* BODY */
+
+body{
+background:hsl(0,0%,96%);
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:40px;
 }
-  
-  /* Grid principal */
 
-  .bento-grid {
-    display: grid;
-    gap: 24px;
-    max-width: 1200px;
+/* GRID */
 
-    /*4 colunas*/
-    grid-template-columns: repeat(4,1fr);
+.bento-grid{
+display:grid;
+gap:24px;
+max-width:1100px;
+width:100%;
 
-    /* layout do desafio */
-    grid-template-areas:
+grid-template-columns:repeat(4,1fr);
 
-    "create hero hero schedule" 
-    "create platforms maintain schedule" 
-    "ai audience followers followers"; 
-  }
+grid-template-areas:
 
-  /* Cards */
+"create hero hero schedule"
+"create platforms maintain schedule"
+"ai audience followers followers";
+}
 
-  .card {
+/* CARDS */
 
-    background: white;
-    padding: 24px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    row-gap: 16px;
-  }
+.card{
+background:white;
+padding:28px;
+border-radius:16px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+gap:18px;
+box-shadow:0 10px 20px rgba(0,0,0,0.05);
+}
 
-   /* imagens */
+/* IMAGENS */
 
-   .card img {
-    max-width: 100%;
-    height: auto;
-   }
+.card img{
+max-width:100%;
+height:auto;
+}
 
-   /* cores */
+/* CORES */
 
-   .purple-100 {
-    background: hsl(254, 88%, 90%);
-   }
+.purple-500{
+background:hsl(256,67%,59%);
+color:white;
+}
 
-   .purple-500{
-    background: hsl(256, 67%, 59%);
-    color: white;
-   }
+.yellow-100{
+background:hsl(31,66%,93%);
+}
+
+.purple2-100{
+background:hsl(254,88%,90%);
+}
+
+.yellow1-100{
+background:hsl(39,100%,71%);
+}
+
+.yellow-text{
+color:hsl(39,100%,71%);
+}
+
+.italic{
+font-style:italic;
+color:#6F52D9;
+}
+
+/* GRID AREAS */
+
+#create-content{
+grid-area:create;
+}
+
+#hero{
+grid-area:hero;
+text-align:center;
+}
+
+#schedule{
+grid-area:schedule;
+}
+
+#platforms{
+grid-area:platforms;
+}
+
+#maintain{
+grid-area:maintain;
+}
+
+#ai-content{
+grid-area:ai;
+}
+
+#audience{
+grid-area:audience;
+text-align:center;
+}
+
+#audience h2 {
+  font-size: xx-large;
+}
+
+#grow-followers{
+grid-area:followers;
+}
+
+/* FOOTER */
+
+.attribution{
+margin-top:auto;
+font-size:12px;
+text-align:center;
+padding-top:40px;
+}
+
+.attribution a{
+color:#3e52a3;
+}
+
+/* RESPONSIVO */
+
+@media (max-width:900px){
+
+.bento-grid{
+
+grid-template-columns:1fr;
+
+grid-template-areas:
+
+"hero"
+"platforms"
+"maintain"
+"schedule"
+"followers"
+"audience"
+"create"
+"ai";
+
+}
+
+}
+
