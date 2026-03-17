@@ -126,44 +126,49 @@ text-align: center;
 padding: 0% 0% 10% 0%;
 }
 
-#schedule{
+#schedule {
 grid-area:schedule;
 height: 600px;
 padding: 2px 0px 8px 0px;
 
 }
-#schedule h2{
+
+#schedule h2 {
 font-size: 30px;
 text-align: center;
+
 }
 
-#schedule img{
+#schedule img {
 width: 100%;
 padding:  8px 5px 8px 5px;
+
 }
 
-#schedule p{
+#schedule p {
 padding:  0px 10px 50px 10px;
+
 }
 
-
-
-#platforms{
+#platforms {
 grid-area:platforms;
+
 }
 
-#maintain{
+#maintain {
 grid-area:maintain;
+
 }
 
 #ai-content{
 grid-area:ai;
 }
 
-#audience{
+#audience {
 grid-area:audience;
 text-align:center;
 font-size: 30px;
+
 }
 
 #audience h2 {
