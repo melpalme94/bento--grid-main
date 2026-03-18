@@ -1,217 +1,332 @@
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
 
 /* RESET */
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'DM Sans', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
 }
 
 /* BODY */
 
-body{
-background:hsl(0,0%,96%);
-min-height:100vh;
-display:flex;
-flex-direction:column;
-align-items:center;
-padding:40px;
+body {
+  background: #f5f5f5;
+  ;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
 }
 
 /* GRID */
 
-.bento-grid{
-display:grid;
-gap:26px;
-max-width:1200px;
-width:100%;
+.bento-grid {
+  display: grid;
+  gap: 24px;
+  max-width: 1100px;
+  width: 100%;
 
-grid-template-columns:repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto auto;
 
-grid-template-areas:
+  grid-template-areas:
 
-"create hero hero schedule"
-"create platforms maintain schedule"
-"ai audience followers followers";
+    "create hero hero schedule"
+    "create platforms maintain schedule"
+    "ai audience followers followers";
 }
 
 /* CARDS */
 
-.card{
-background:white;
-padding: 25px;
-border-radius:16px;
-display:flex;
-flex-direction:column;
-justify-content:space-around;
-gap:18px;
-box-shadow:0 10px 20px rgba(0,0,0,0.05);
+.card {
+  border-radius: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
-/* IMAGENS */
+/* TIPOGRAFIA */
 
-.card img{
-max-width:100%;
-height:auto;
+h1 {
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 16px;
 }
 
 /* CORES */
 
-.purple-500{
-background:hsl(256,67%,59%);
-color:white;
-
+.purple-500 {
+  background-color: #752fee;
+  color: #fff;
 }
 
-.yellow-100{
-background:hsl(31,66%,93%);
+.yellow-100 {
+  background: hsl(50, 68%, 88%);
 }
 
-.purple2-100{
-background:hsl(254,88%,90%);
+.purple2-100 {
+  background: hsl(254, 88%, 90%);
 }
 
-.yellow1-100{
-background:hsl(39,100%,71%);
+.yellow1-100 {
+  background: hsl(39, 100%, 65%);
 }
 
-.yellow-text{
-color:hsl(39,100%,71%);
+.yellow-text {
+  color: hsl(39, 100%, 71%);
 }
 
-.italic{
-font-style:italic;
-color:#6F52D9;
+.italic {
+  font-style: italic;
+  color: #6F52D9;
 }
 
 /* GRID AREAS */
 
-#create-content{
-grid-area:create;
-font-size: x-large;
-padding-bottom: 85%;
-height: 450px;
-border-radius: 10px;
-
+#create-content {
+  grid-area: create;
 }
 
-#hero{
-grid-area:hero;
-align-items:center;
-margin: auto;
-padding: 0;
-width: 80%;
-height:100%;
-}
-
-#hero h1{
-  font-size: 50px;
+#hero {
+  grid-area: hero;
   text-align: center;
-  padding: 10% 0% 0% 0%;
-  
-}
-
-#hero img{
-width: 200px;
-margin: auto;
-padding: 0% 0% 0% 0%;
-  
-}
-
-#hero p {
-text-align: center;
-padding: 0% 0% 10% 0%;
 }
 
 #schedule {
-grid-area:schedule;
-height: 600px;
-padding: 2px 0px 8px 0px;
-
-}
-
-#schedule h2 {
-font-size: 30px;
-text-align: center;
-
-}
-
-#schedule img {
-width: 100%;
-padding:  8px 5px 8px 5px;
-
-}
-
-#schedule p {
-padding:  0px 10px 50px 10px;
-
+  grid-area: schedule;
 }
 
 #platforms {
-grid-area:platforms;
-
+  grid-area: platforms;
 }
 
 #maintain {
-grid-area:maintain;
-
+  grid-area: maintain;
 }
 
-#ai-content{
-grid-area:ai;
+#ai-content {
+  grid-area: ai;
 }
 
 #audience {
-grid-area:audience;
-text-align:center;
-font-size: 30px;
+  grid-area: audience;
+}
+
+#grow-followers {
+  grid-area: followers;
+}
+
+/* HERO AJUSTE */
+
+#hero {
+  align-items: center;
+  justify-content: center;
+}
+
+#hero img {
+  width: 190px;
+  margin: 50px 0;
+}
+
+#hero h1 {
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+#hero p {
+  font-size: 18px;
+  padding-bottom: 18px;
 
 }
 
-#audience h2 {
+/* CREATE */
+
+#create-content {
+  justify-content: space-between;
+
+}
+
+#create-content h2 {
+  margin-bottom: 16px;
+  font-size: 45px;
+}
+
+#create-content img {
+  width: 200px;
+  align-self: flex-start;
+  padding-bottom: 40px;
+}
+
+/* PLATFORMS */
+
+#platforms {
+  justify-content: space-between;
+}
+#platforms h2 {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+#platforms img {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* MAINTAIN */
+
+#maintain {
+  position: relative;
+}
+
+#maintain img {
+  position: absolute;
+  bottom: -68px;
+  left: 25px;
+  width: 80%;
+  margin: auto;
+}
+
+#maintain h2 {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+/* SCHEDULE (lado direito alto) */
+
+#schedule {
+  justify-content: space-between;
+}
+
+#schedule img {
+  width: 365px;
+  margin-top: 10px;
+}
+
+#schedule h2 {
+  font-size: 30px;
+  margin-bottom: 3px;
+  margin-top: 25px;
+}
+
+#schedule p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* AI CARD */
+
+#ai-content {
+  justify-content: space-between;
+}
+
+#ai-content img {
+  width: 100%;
+  margin-top: 16px;
+}
+
+#ai-content h2 {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+/* AUDIENCE */
+
+#audience {
+  justify-content: center;
   font-size: 100px;
 }
 
-#grow-followers{
-grid-area:followers;
+#audience img {
+  width: 140px;
+  margin-top: 16px;
+}
+
+/* AUDIENCE */
+#audience {
+  justify-content: center;
+}
+
+#audience img {
+  width: 200px;
+
+  margin: auto;
+}
+
+#audience h2 {
+  font-size: 75px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+#audience p {
+  font-size: 18px;
+  text-align: center;
+}
+
+/* FOLLOWERS */
+
+#grow-followers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+#grow-followers img {
+  width: 300px;
+}
+#grow-followers h2 {
+  font-size: 40px;
 }
 
 /* FOOTER */
-
-.attribution{
-margin-top:auto;
-font-size:12px;
-text-align:center;
-padding-top:40px;
+.attribution {
+  margin-top: auto;
+  padding-top: 40px;
+  font-size: 12px;
+  text-align: center;
 }
 
-.attribution a{
-color:#3e52a3;
+/* MOBILE */
+@media (max-width:768px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "hero" "platforms" "maintain" "schedule" "followers" "audience" "create" "ai";
+  }
+
+  /* ajustes mobile */
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  #grow-followers {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #grow-followers img {
+    width: 100%;
+  }
+
+  #hero img {
+    width: 140px;
+  }
 }
-
-/* RESPONSIVO */
-
-@media (max-width:900px){
-
-.bento-grid{
-
-grid-template-columns:1fr;
-
-grid-template-areas:
-
-"hero"
-"platforms"
-"maintain"
-"schedule"
-"followers"
-"audience"
-"create"
-"ai";
-
-}
-
-}
-
